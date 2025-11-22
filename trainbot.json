@@ -1,87 +1,92 @@
-print("welcome to my chatbot😁😁")
-print("answer the 10 questions")
-score=0
-questopins=[
-    {"questions":"1.what is the AI fullform"
-       "ä":"Artifical intelligence"
-       "b":"analysis intelligence"
-       "c":"Automatic intelligence"
-       "d":"Artifical integration"
-       "answer":"a" },
-    {"questions":"2.who is the ceo of Tesla"
-       "ä":"Billgates"
-       "b":"Elon Musk"
-       "c":"tim cook"
-       "d":"Satya Nadella"
-       "answer":"b" },
-    {"questions":"3. who is the ceo of apple"
-       "a":"Billgates"
-       "b":"Elon Musk"
-       "c":"tim cook"
-       "d":"Satya Nadella
-       "answer":"c" },
-    {"questions":"4.who is the ceo of toyota"
-       "ä":"Billgates"
-       "b":"Elon musk"
-       "c":"Koji Sato"
-       "d":"tim cook"
-       "answer":"c" },
-    {"questions":"5.who is the ceo of microsoft "
-       "ä":"Satya Nadella"
-       "b":"tim cook"
-       "c":"billgates"
-       "d":"koji sato"
-       "answer":"a" },
-        {"questions":"who is the ceo of nvidia"
-       "ä":"tim cook"
-       "b":"elon musk"
-       "c":"billgates"
-       "d":"Jensen Huang"
-       "answer":"d" },
-        {"questions":"who is the ceo of meta"
-       "ä":"tom cook"
-       "b":"elon musk"
-       "c":" Mark Zuckerberg"
-       "d":"koji sato"
-       "answer":"c" },
-        {"questions":"who is the ceo of general motors "
-       "ä":"tim  cook"
-       "b":"Mary Barra"
-       "c":"koji sato"
-       "d":"elon musk"
-       "answer":"b" },
-        {"questions":"who is the ceo of "
-       "ä":"tom"
-       "b":"Sundar Pichai"
-       "c":"elon musk"
-       "d":"koji sato"
-       "answer":"b" },
-        {"questions":"who is the ceo of amazon"
-       "ä":"mary bridge"
-       "b":"tim cook"
-       "c":"Andy Jassy"
-       "d":"billgates"
-       "answer":"c" },
-        {"questions":"who is the ceo of ford"
-       "ä":"Jim Farley "
-       "b":"andy jassy"
-       "c":"billgates"
-       "d":"tom ford"
-       "answer":"a" },
-       
+print("Welcome to my chatbot 😁😁")
+print("Answer the 10 questions")
+score = 0
 
+questions = [
+    {"question": "1. What is the full form of AI?",
+     "a": "Artificial Intelligence",
+     "b": "Analysis Intelligence",
+     "c": "Automatic Intelligence",
+     "d": "Artificial Integration",
+     "answer": "a"},
+
+    {"question": "2. Who is the CEO of Tesla?",
+     "a": "Bill Gates",
+     "b": "Elon Musk",
+     "c": "Tim Cook",
+     "d": "Satya Nadella",
+     "answer": "b"},
+
+    {"question": "3. Who is the CEO of Apple?",
+     "a": "Bill Gates",
+     "b": "Elon Musk",
+     "c": "Tim Cook",
+     "d": "Satya Nadella",
+     "answer": "c"},
+
+    {"question": "4. Who is the CEO of Toyota?",
+     "a": "Bill Gates",
+     "b": "Elon Musk",
+     "c": "Koji Sato",
+     "d": "Tim Cook",
+     "answer": "c"},
+
+    {"question": "5. Who is the CEO of Microsoft?",
+     "a": "Satya Nadella",
+     "b": "Tim Cook",
+     "c": "Bill Gates",
+     "d": "Koji Sato",
+     "answer": "a"},
+
+    {"question": "6. Who is the CEO of Nvidia?",
+     "a": "Tim Cook",
+     "b": "Elon Musk",
+     "c": "Bill Gates",
+     "d": "Jensen Huang",
+     "answer": "d"},
+
+    {"question": "7. Who is the CEO of Meta?",
+     "a": "Tom Cook",
+     "b": "Elon Musk",
+     "c": "Mark Zuckerberg",
+     "d": "Koji Sato",
+     "answer": "c"},
+
+    {"question": "8. Who is the CEO of General Motors?",
+     "a": "Tim Cook",
+     "b": "Mary Barra",
+     "c": "Koji Sato",
+     "d": "Elon Musk",
+     "answer": "b"},
+
+    {"question": "9. Who is the CEO of Google?",
+     "a": "Tom",
+     "b": "Sundar Pichai",
+     "c": "Elon Musk",
+     "d": "Koji Sato",
+     "answer": "b"},
+
+    {"question": "10. Who is the CEO of Amazon?",
+     "a": "Mary Bridge",
+     "b": "Tim Cook",
+     "c": "Andy Jassy",
+     "d": "Bill Gates",
+     "answer": "c"},
 ]
- for q in questions:
-                print(q["questions"])
-                print("a)",q["a"])  
-                print("b)",q["b"])  
-                print("c)",q["c"])  
-                print("d)",q["d"])  
-                user_ans=input("your amswer:").lower()
-                if user_ans==q["answer"]:
-                     print("👍correct answer\n")
-                     score+=1
-                else:
-                    print("❌wrong bro")
- print("your score:",score,"/",len(questions))                        
-                                      
+
+for q in questions:
+    print("\n" + q["question"])
+    print("a)", q["a"])
+    print("b)", q["b"])
+    print("c)", q["c"])
+    print("d)", q["d"])
+
+    user_ans = input("Your answer: ").lower()
+
+    if user_ans == q["answer"]:
+        print("👍 Correct answer!\n")
+        score += 1
+    else:
+        print("❌ Wrong bro!\n")
+
+print("Your score:", score, "/", len(questions))
